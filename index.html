@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Óptica Lumen · Lentes con receta, de sol y de contacto</title>
+  <meta name="description" content="Elige tus lentes en línea, reserva tu pedido y retíralo en la óptica.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="marca" href="#inicio">Óptica Lumen</a>
+    <nav aria-label="Principal">
+      <a href="#tienda">Catálogo</a>
+      <a href="#contacto">Visítanos</a>
+    </nav>
+    <button id="abrir-pedido" class="btn">Mi pedido (<span id="cuenta">0</span>)</button>
+  </header>
+
+  <main>
+    <section id="inicio" class="chart">
+      <h1>
+        <span class="fila f1">Ver<small>20/200</small></span>
+        <span class="fila f2">bien empieza<small>20/100</small></span>
+        <span class="fila f3">por elegir bien<small>20/50</small></span>
+      </h1>
+      <p class="fila f4">Lentes con receta, de sol y de contacto. Examen visual gratis al comprar tus lentes.<small>20/25</small></p>
+      <p class="fila f5"><a class="btn" href="#tienda">Ver catálogo</a><small>20/20</small></p>
+    </section>
+
+    <section id="tienda" class="tienda">
+      <h2>Catálogo</h2>
+      <div class="filtros" role="group" aria-label="Filtrar por tipo">
+        <button data-f="todos" aria-pressed="true">Todos</button>
+        <button data-f="graduacion" aria-pressed="false">Con receta</button>
+        <button data-f="sol" aria-pressed="false">De sol</button>
+        <button data-f="contacto" aria-pressed="false">De contacto</button>
+      </div>
+      <div id="catalogo" class="grid" aria-live="polite"><p>Cargando catálogo…</p></div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <h2>Visítanos</h2>
+    <p>Av. Principal 123 · Lunes a sábado, 9:00 a 19:00</p>
+    <p>Teléfono: (000) 000-0000</p>
+  </footer>
+
+  <dialog id="pedido">
+    <form method="dialog"><button class="cerrar" aria-label="Cerrar">×</button></form>
+    <h2>Tu pedido</h2>
+    <ul id="lineas"></ul>
+    <p class="total">Total <strong id="total"></strong></p>
+    <form id="datos">
+      <label>Nombre completo <input name="nombre" required autocomplete="name"></label>
+      <label>Teléfono <input name="telefono" type="tel" required autocomplete="tel"></label>
+      <label>Correo (opcional) <input name="email" type="email" autocomplete="email"></label>
+      <button class="btn" type="submit">Enviar pedido</button>
+    </form>
+    <p id="msg" role="status"></p>
+  </dialog>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

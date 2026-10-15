@@ -1,0 +1,6 @@
+// Supabase > Project Settings > API
+// La "anon key" es pública por diseño; la seguridad la dan las políticas RLS de schema.sql.
+export const SUPABASE_URL = "https://TU-PROYECTO.supabase.co";
+export const SUPABASE_ANON_KEY = "TU-ANON-KEY";
+export const MONEDA = "USD";
+export const LOCALE = "es";
